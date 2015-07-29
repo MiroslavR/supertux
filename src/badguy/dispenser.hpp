@@ -23,6 +23,7 @@ class Dispenser : public BadGuy
 {
 public:
   Dispenser(const ReaderMapping& reader);
+  virtual void save(lisp::Writer& writer);
 
   void activate();
   void deactivate();
@@ -32,6 +33,9 @@ public:
   void unfreeze();
   bool is_freezable() const;
   bool is_flammable() const;
+  virtual std::string get_class() {
+    return "dispenser";
+  }
 
 protected:
   bool collision_squished(GameObject& object);

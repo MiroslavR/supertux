@@ -89,6 +89,15 @@ Dispenser::Dispenser(const ReaderMapping& reader) :
 }
 
 void
+Dispenser::save(lisp::Writer& writer) {
+  BadGuy::save(writer);
+  writer.write("type", type, false);
+  writer.write("badguy", badguys);
+  writer.write("random", random);
+  writer.write("cycle", cycle);
+}
+
+void
 Dispenser::activate()
 {
   if( broken ){

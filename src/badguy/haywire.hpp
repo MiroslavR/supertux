@@ -35,6 +35,10 @@ public:
   bool is_freezable() const;
   void freeze();
 
+  virtual std::string get_class() {
+    return "haywire";
+  }
+
 protected:
   bool collision_squished(GameObject& object);
 

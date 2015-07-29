@@ -44,6 +44,9 @@ public:
 
   void kill_fall();
   void ignite();
+  virtual std::string get_class() {
+    return "goldbomb";
+  }
 
 protected:
   bool collision_squished(GameObject& object);
