@@ -168,6 +168,9 @@ public:
   virtual std::string get_class() {
     return "tilemap";
   }
+
+  bool editor_active;
+
 private:
   const TileSet *tileset;
 
