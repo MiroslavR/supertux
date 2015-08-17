@@ -271,7 +271,7 @@ BadGuy::save(lisp::Writer& writer) {
   MovingSprite::save(writer);
   if(dir == LEFT){
     writer.write("direction", "left", false);
-  }else{
+  } else {
     writer.write("direction", "right", false);
   }
   if(dead_script != ""){
@@ -611,7 +611,7 @@ BadGuy::is_offscreen() const
       Camera *cam = Sector::current()->camera;
       dist = cam->get_center() - get_bbox().get_middle();
     }
-  }else{
+  } else {
     Player* player = get_nearest_player();
     if (!player) return false;
     dist = player->get_bbox().get_middle() - bbox.get_middle();
