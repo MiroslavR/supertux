@@ -40,6 +40,8 @@ public:
     return "flame";
   }
 
+  virtual ObjectSettings get_settings();
+
 private:
   float angle;
   float radius;

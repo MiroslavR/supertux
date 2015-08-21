@@ -47,6 +47,7 @@ public:
   }
 
   bool is_flammable() const;
+  virtual ObjectSettings get_settings();
 
 protected:
   const BadGuy* parent; /**< collisions with this BadGuy will be ignored */
