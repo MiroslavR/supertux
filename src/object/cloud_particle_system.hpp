@@ -51,6 +51,8 @@ private:
 
   SurfacePtr cloudimage;
 
+  virtual ObjectSettings get_settings();
+
 private:
   CloudParticleSystem(const CloudParticleSystem&);
   CloudParticleSystem& operator=(const CloudParticleSystem&);
