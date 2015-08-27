@@ -35,7 +35,7 @@ public:
   bool is_freezable() const;
   void freeze();
 
-  virtual std::string get_class() {
+  virtual std::string get_class() const {
     return "haywire";
   }
 
