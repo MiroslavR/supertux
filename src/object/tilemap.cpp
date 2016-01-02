@@ -19,6 +19,7 @@
 #include <math.h>
 
 #include "editor/editor.hpp"
+#include "object/tilemap.hpp"
 #include "scripting/squirrel_util.hpp"
 #include "scripting/tilemap.hpp"
 #include "supertux/globals.hpp"
@@ -55,6 +56,7 @@ TileMap::TileMap(const TileSet *new_tileset) :
 }
 
 TileMap::TileMap(const TileSet *tileset_, const ReaderMapping& reader) :
+  editor_active(true),
   tileset(tileset_),
   tiles(),
   real_solid(false),
@@ -145,7 +147,7 @@ TileMap::~TileMap()
 }
 
 void
-TileMap::save(lisp::Writer& writer) {
+TileMap::save(Writer& writer) {
   GameObject::save(writer);
   if (draw_target == LIGHTMAP) {
     writer.write("draw-target", "lightmap", false);

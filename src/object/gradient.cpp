@@ -91,7 +91,7 @@ Gradient::Gradient(const ReaderMapping& reader) :
 }
 
 void
-Gradient::save(lisp::Writer& writer) {
+Gradient::save(Writer& writer) {
   GameObject::save(writer);
   writer.write("z-pos",layer);
   switch (gradient_direction) {
