@@ -166,7 +166,7 @@ public:
    */
   float get_alpha() const;
 
-  virtual std::string get_class() {
+  virtual std::string get_class() const {
     return "tilemap";
   }
 
